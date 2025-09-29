@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">defer</script>
+    <title>Form Ajuan Layanan</title>
+</head>
+<body>
+    <h1 class="text-center py-4">Formulir Ajuan Layanan</h1>
+    <div class="alert alert-success alert-dismissible fade show text-center py-4 d-none my-alert" role="alert">
+  <strong>Ajuan layanan berhasil!</strong> Silahkan tunggu proses selanjutnya.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    <form method="POST" class="container" name="form_sedot_tinja">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nama lengkap</label>
+    <input type="text" class="form-control" id="nama" name="NAMA">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Alamat lengkap</label>
+    <textarea class="form-control" id="alamat" rows="3" name="ALAMAT"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Nomor HP</label>
+    <input type="text" class="form-control" id="nohp" name="NO.HP">
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label" >Objek Pelayanan</label>
+    <select class="form-select" id="objeklayanan" name="OBJEK PELAYANAN">
+  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+  <option value="Rumah Tangga">Rumah Tangga</option>
+  <option value="Rumah Sakit">Rumah Sakit</option>
+  <option value="Fasilitas Umum">Fasilitas Umum</option>
+  <option value="Kantor">Kantor</option>
+  <option value="Perusahaan">Perusahaan</option>
+</select>
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Jenis Septictank</label>
+    <select class="form-select" id="jenisst" name="JENIS SEPTICTANK">
+  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+  <option value="Beton">Beton</option>
+  <option value="Kayu">Kayu</option>
+  <option value="Komunal">Komunal</option>
+  <option value="Individu">Individu</option>
+  <option value="IPAL">IPAL</option>
+</select>
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Lubang Penyedotan</label>
+    <select class="form-select" id="lubangsedot" name="LUBANG PENYEDOTAN">
+  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+  <option value="Ada">Ada</option>
+  <option value="Tidak ada">Tidak ada</option>
+</select>
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Apakah anda sudah berlangganan PDAM Tirta Sendawar?</label>
+    <select class="form-select" id="langganan" name="LANGGANAN PDAM TIRTA SENDAWAR">
+  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+  <option value="Sudah">Sudah</option>
+  <option value="Belum">Belum</option>
+</select>
+  </div>
+  <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+  <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span role="status">Loading...</span>
+</button>
+    </form>
+    <br>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzukND_CLXYUMdpqc8Sr8K6iYhL9_9XBlnZSPvSKTOX7Zzca9gCj8xjzmWfikrOyDwK/exec';
+  const form = document.forms['form_sedot_tinja'];
+  const btnKirim = document.querySelector('.btn-kirim')
+  const btnLoading = document.querySelector('.btn-loading')
+  const btnAlert = document.querySelector('.my-alert')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    btnLoading.classList.toggle('d-none')
+    btnKirim.classList.toggle('d-none')
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        btnAlert.classList.toggle('d-none');
+        console.log('Success!', response)
+    })
+      .catch(error => console.error('Error!', error.message))
+  });
+</script>
+</body>
+</html>
