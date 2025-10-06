@@ -25,6 +25,9 @@
     }
     .container-navbar-home {
         height: 9%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
     }
     .li-navbar-home {
         font-size: 13px; 
