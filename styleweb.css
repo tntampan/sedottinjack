@@ -6,18 +6,47 @@ html {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-
-.container {
-    background-image: linear-gradient( 66.5deg,  rgba(161,204,165,1) -11.3%, rgba(12,146,180,1) 100.1% );
-    width: 100%;
-    height: 100%;
+.container-home {
+    
 }
 
 
-.container-navbar {
-    height: 10%;
+.container-navbar-home {
+    height: 15%;
     position: sticky; top: 0;
-    backdrop-filter: blur(45px);
+    backdrop-filter: blur(10px);
+}
+
+.ul-navbar-home {
+margin-left: 20px;
+justify-content: left;
+align-items: center;
+display: flex;
+height: 100px;
+}
+
+.li-navbar-home {
+list-style-type: none;
+padding: 10px;
+margin: 5px;
+color: #000;
+font-size: 20px;
+}
+
+.a-navbar-home {
+    color: black;
+    text-decoration: none;
+}
+
+
+.container {
+    background-image: linear-gradient( 66.5deg,  rgba(161,204,165,1) -11.3%, rgba(12,146,180,1) 100.1% );
+}
+
+.container-navbar {
+    height: 15%;
+    position: sticky; top: 0;
+    backdrop-filter: blur(10px);
 }
 
 .ul-navbar {
@@ -42,24 +71,8 @@ font-size: 20px;
 }
 
 .logo-siluti {
-    width: 15%;
+    width: 14%;
     height: 190%;
-}
-
-.truk {
-    position: relative;
-    left: 400px;
-    top: 250px;
-    width: 55%;
-    height: 45%;
-}
-
-.pekerja {
-    position: relative;
-    left: -290px;
-    top: 90px;
-    width: 37%;
-    height: 60%;
 }
 
 .container-content {
@@ -67,23 +80,25 @@ font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 86%;
+    height: 85%;
     width: 100%;
-    color: black;
+    background-image: url(lumpurtinja.jpg);
+
 }
 
 .p-content{
     font-size: 20px;
-    color: black;
+    color: #eaeaea;
 }
 
 .h-content{
+    color: #eaeaea;
     font-size: 55px;
 }
 
 .button {
     position: relative;
-    top: 6px;
+    top: 10px;
     padding: 8px 15px;
     font-size: 20px;
     color: aliceblue;
@@ -95,4 +110,37 @@ font-size: 20px;
 
 .button:hover {
 background-color: rgb(0, 132, 255);
+}
+
+.info-layanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-pdf1 {
+    position: relative;
+    left: 50;
+    height: 600; 
+    width: 500;
+}
+
+.about-pdf2 {
+    position: relative;
+    left: 100;
+    height: 600; 
+    width: 500;
+}
+
+.tentang-kami {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-pdf1 {
+    position: relative;
+    left: 80px;
+    height: 600; 
+    width: 500;
 }
