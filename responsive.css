@@ -10,7 +10,7 @@
     }
 }
 
-@media(min-width:370px) and (max-width:670px) {
+@media(min-width:300px) and (max-width:600px) {
     .container-content {
         height: 92%;
     }   
@@ -39,3 +39,4 @@
     }   
         
 }
+
