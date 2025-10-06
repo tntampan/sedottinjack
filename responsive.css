@@ -1,0 +1,38 @@
+@media(min-width:670px) and (max-width:1024px) {
+    .container-content {
+        height: 85%;
+    }
+    .container-navbar-home {
+        height: fit-content;
+    }
+    .logo-siluti {
+        width: fit-content;
+    }
+}
+
+@media(min-width:370px) and (max-width:670px) {
+    .container-content {
+        height: 91%;
+    }   
+    .h-content {
+        font-size: 30px;
+    } 
+    .p-content {
+        font-size: 20px;
+    }
+    .button {
+        font-size: 15px;
+    }
+    .container-navbar-home {
+        height: 9%;
+    }
+    .li-navbar-home {
+        font-size: 13px; 
+        padding: 2px;   
+    }
+    .logo-siluti {
+        width: 25%;
+        height: 100%;
+    }   
+        
+}
