@@ -24,7 +24,7 @@
         font-size: 15px;
     }
     .container-navbar-home {
-        height: 9%;
+        height: 8%;
         display: flex;
         justify-content: left;
         align-items: center;
@@ -39,3 +39,4 @@
     }   
         
 }
+
