@@ -65,7 +65,19 @@
     width: 100%;
 }
 
+.container-navbar {
+    margin-left: -10px;
+    height: 8%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
 .info-layanan {
+    font-size: 25px;
+}
+
+.tentang-kami {
     font-size: 25px;
 }
 
@@ -75,8 +87,19 @@
     width: 100;
 }
 
+.about-pdf1 {
+    position: relative;
+    height: 200; 
+    width: 100;
+}
+.about-pdf2 {
+    position: relative;
+    height: 200; 
+    width: 100;
+}
+
 .logo-siluti1 {
-    width: 30%;
+    width: 80%;
     height: 100%;
 }
 }
