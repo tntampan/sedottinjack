@@ -36,6 +36,10 @@
         display: none;   
     }
 
+    .li-navbar {
+        display: none;
+    }
+
     .icon-sidebar {
         list-style: none;
         display: flex;
@@ -56,6 +60,23 @@
        left: 40px; 
     }
     
-        
+.container {
+    height: 100%;
+    width: 100%;
 }
 
+.info-layanan {
+    font-size: 25px;
+}
+
+.info-pdf1 {
+    position: relative;
+    height: 200; 
+    width: 100;
+}
+
+.logo-siluti1 {
+    width: 30%;
+    height: 100%;
+}
+}
