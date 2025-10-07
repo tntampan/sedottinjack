@@ -12,26 +12,26 @@
 <body class="ajuan">
     <h1 class="text-center py-4">Formulir Ajuan Layanan</h1>
     <div class="alert alert-success alert-dismissible fade show text-center py-4 d-none my-alert" role="alert">
-  <strong>Ajuan layanan berhasil!</strong> 
+  <strong>Ajuan layanan berhasil! Silahkan klik logo whatsapp untuk konfirmasi ke petugas!</strong> 
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
     <form method="POST" class="container" name="form_sedot_tinja">
   <div class="mb-3">
     <label for="name" class="form-label">Nama lengkap</label>
-    <input type="text" class="form-control" id="nama" name="NAMA">
+    <input type="text" class="form-control" id="nama" name="NAMA" required>
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Alamat lengkap</label>
-    <textarea class="form-control" id="alamat" rows="3" name="ALAMAT"></textarea>
+    <textarea class="form-control" id="alamat" rows="3" name="ALAMAT" required></textarea>
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Nomor HP</label>
-    <input type="text" class="form-control" id="nohp" name="NO.HP">
+    <input type="number" class="form-control" id="nohp" name="NO.HP" required>
   </div>
   <div class="mb-3">
-    <label for="body" class="form-label" >Objek Pelayanan</label>
-    <select class="form-select" id="objeklayanan" name="OBJEK PELAYANAN">
-  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+    <label for="body" class="form-label">Objek Pelayanan</label>
+    <select class="form-select" id="objeklayanan" name="OBJEK PELAYANAN" required>
+  <option selected disabled value="">Pilih salah satu...</option>
   <option value="Rumah Tangga">Rumah Tangga</option>
   <option value="Rumah Sakit">Rumah Sakit</option>
   <option value="Fasilitas Umum">Fasilitas Umum</option>
@@ -41,8 +41,8 @@
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Jenis Septictank</label>
-    <select class="form-select" id="jenisst" name="JENIS SEPTICTANK">
-  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+    <select class="form-select" id="jenisst" name="JENIS SEPTICTANK" required>
+  <option selected disabled value="">Pilih salah satu...</option>
   <option value="Beton">Beton</option>
   <option value="Kayu">Kayu</option>
   <option value="Komunal">Komunal</option>
@@ -52,24 +52,24 @@
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Lubang Penyedotan</label>
-    <select class="form-select" id="lubangsedot" name="LUBANG PENYEDOTAN">
-  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+    <select class="form-select" id="lubangsedot" name="LUBANG PENYEDOTAN" required>
+  <option selected disabled value="">Pilih salah satu...</option>
   <option value="Ada">Ada</option>
   <option value="Tidak ada">Tidak ada</option>
 </select>
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Apakah ada akses penyedotan? (minimal 10 meter dari septictank)</label>
-    <select class="form-select" id="akses" name="AKSES PENYEDOTAN">
-  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+    <select class="form-select" id="akses" name="AKSES PENYEDOTAN" required>
+  <option selected disabled value="">Pilih salah satu...</option>
   <option value="Ada">Ada</option>
   <option value="Tidak ada">Tidak ada</option>
 </select>
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Pilih kategori biaya retribusi (pilih sesuai dengan tempat tujuan penyedotan)</label>
-    <select class="form-select" id="biaya" name="BIAYA">
-  <option selected aria-label="Disabled select example" disabled>Pilih salah satu...</option>
+    <select class="form-select" id="biaya" name="BIAYA" required>
+  <option selected disabled value="">Pilih salah satu...</option>
   <option value="764.589,00">Rumah Tangga (Rp 764.589,00)</option>
   <option value="1.758.554,00">Non-Rumah Tangga (Rp 1.758.554,00) </option>
 </select>
@@ -84,13 +84,13 @@
   </div>
   <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
 
-  <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+ <button class="btn btn-primary btn-loading d-none" type="button" disabled>
   <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>
     </form>
-    <br>
-
+<a href="https://api.whatsapp.com/send?phone=6285729288870&text=Halo!, saya telah mengisi formulir layanan penyedotan lumpur tinja atas nama ..." target="_blank" class="konfirmasi"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" class="logo-wa">Klik untuk konfirmasi!</a>
+<br>
     <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzukND_CLXYUMdpqc8Sr8K6iYhL9_9XBlnZSPvSKTOX7Zzca9gCj8xjzmWfikrOyDwK/exec';
   const form = document.forms['form_sedot_tinja'];
