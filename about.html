@@ -1,14 +1,18 @@
 <html>
     <head>
         <title>SiLuTiKuat</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device, initial-scale=1.0">
         <link rel="shortcut icon" href="Logo PU.jpg" type="image/x-icon">
         <link rel="stylesheet" href="styleweb.css" />
+        <link rel="stylesheet" href="responsive.css" />
     <body>  
         <div class="container">
     <!-- NAVIGATION BAR -->
 <div class="container-navbar">
 <ul class="ul-navbar">
-    <img src="Logo SiLuTi Kuat (1).png" class="logo-siluti" />
+    <img src="Logo SiLuTi Kuat (1).png" class="logo-siluti1" />
     <li class="li-navbar">
         <a href="index.html" class="a-navbar">Halaman Utama</a>
     </li>
@@ -21,8 +25,45 @@
     <li class="li-navbar">
         <a href="https://api.whatsapp.com/send/?phone=6282322428312&text&type=phone_number&app_absent=0" class="a-navbar">Narahubung</a>
     </li>
+    <li onclick=showSidebar() class="icon-sidebar">
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </a>
+    </li>
 </ul>
 </div>
+
+<div class="sidebar">
+<ul class="ul-navbar-sidebar">
+    <li onclick=hideSidebar() class="li-navbar-sidebar">
+        <a href="#" class="a-navbar-sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+    </li>
+    <li class="li-navbar-sidebar">
+        <a href="index.html" class="a-navbar-sidebar">Halaman Utama</a>
+    </li>
+    <li class="li-navbar-sidebar">
+        <a href="informasi layanan.html" class="a-navbar-sidebar">Informasi Layanan</a>
+    </li>
+    <li class="li-navbar-sidebar">
+        <a href="about.html" class="a-navbar-sidebar">Tentang</a>
+    </li>
+    <li class="li-navbar-sidebar">
+        <a href="https://api.whatsapp.com/send/?phone=6282227524259&text&type=phone_number&app_absent=0" class="a-navbar-sidebar">Narahubung</a>
+    </li>
+</ul>
+</div>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+       sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+       sidebar.style.display = 'none'
+    }
+
+</script>
     <!-- NAVIGATION BAR SELESAI -->
         <title>tentang</title>
     </head>
@@ -31,7 +72,7 @@
         <br>
         <embed class="about-pdf1" type="application/PDF" src="Perda Kubar 01-2024 TTG PAJAK DAERAH DAN RETRIBUSI DAERAH.pdf" ></body>
         <embed class="about-pdf2" type="application/PDF" src="SK TIM PENYELENGGARA SANITASI 2025.pdf" ></body>
-        
+            
         <br>
     </body>
 </html>
